@@ -1,0 +1,25 @@
+# Setup
+title:        俺のツールズ
+tagline:      "自分の為に作ったツールをほそぼそと公開して恥を晒すサイトです."
+baseurl:      ""
+paginate:     1
+locale:       "ja"
+url:          "https://oreno.tools"
+
+# About/contact
+author:
+  name:       inokappa
+  url:        https://github.com/inokappa
+
+# Gems
+gems:
+  - jekyll-paginate
+
+# Others
+markdown: kramdown
+
+page_gen:
+  - index_files: true
+    data: 'releases'
+    template: 'release'
+    name: 'title'
