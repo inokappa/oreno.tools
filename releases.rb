@@ -6,6 +6,7 @@ REPOS = %w(konyadake-git
            bibuild
            nagilla
            wafoo
+           daimyo
            furikake
            ec2ctrl
            amiCtrl
