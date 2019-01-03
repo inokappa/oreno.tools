@@ -61,7 +61,7 @@ jobs:
               --exclude="*releases/*"
 workflows:
   version: 2
-  test-deploy:
+  oreno-tools:
     jobs:
       - build
       - deploy:
