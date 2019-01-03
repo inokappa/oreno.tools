@@ -11,7 +11,7 @@ header: images/sakurajima.jpg
 # Updates
 
 {% for r in site.data.releases %}
-* {{r.updated}} {{r.title}} [{{r.version}}](https://github.com/inokappa/amiCtrl/releases/tag/{{r.version}}) をリリースしました.
+* {{r.updated}} {{r.title}} [{{r.version}}](https://github.com/inokappa/{{r.title}}/releases/tag/{{r.version}}) をリリースしました.
 {% endfor %}
 
 # Tools

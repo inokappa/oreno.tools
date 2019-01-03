@@ -60,6 +60,7 @@ jobs:
               --exclude="deploy.sh" \
               --exclude="*releases/*"
       - run:
+          name: CloudFront Invalidation
           command: |
             ~/.local/bin/aws cloudfront create-invalidation \
               --distribution-id=${CLOUDFRONT_DISTRIBUTION_ID} \
