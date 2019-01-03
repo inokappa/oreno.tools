@@ -48,8 +48,6 @@ jobs:
     <<: *defaults
     docker:
       - image: circleci/python:3.6.3
-    environment:
-      S3_BUCKET_NAME: <<YOUR BUCKET NAME HERE>>
     steps:
       - attach_workspace:
           at: ./
@@ -58,7 +56,14 @@ jobs:
           command: pip install awscli --upgrade --user
       - run:
           name: Upload to s3
-          command: ~/.local/bin/aws s3 sync ./_site/ s3://${S3_BUCKET_NAME}/ --delete --exclude "jekyll-cayman-theme.gemspec" --exclude "README.md" --exclude "deploy.sh" --exclude "*releases/*"
+          command: |
+            echo ${S3_BUCKET_NAME}
+            ~/.local/bin/aws s3 sync ./_site/ s3://${S3_BUCKET_NAME}/ \
+              --delete \
+              --exclude="jekyll-cayman-theme.gemspec" \
+              --exclude="README.md" \
+              --exclude="deploy.sh" \
+              --exclude="*releases/*"
 workflows:
   version: 2
   test-deploy:
