@@ -6,7 +6,7 @@ header: images/sakurajima.jpg
 
 # About
 
-自分の為に作ったツールをほそぼそと公開して恥を晒すサイトです.
+自分の為に作ったツールを細々と公開して恥を晒すサイトです.
 
 # Updates
 
