@@ -18,8 +18,9 @@ gems:
 # Others
 markdown: kramdown
 
+# data_page_generator
 page_gen:
-  - index_files: true
+  - index_files: false
     data: 'releases'
-    template: 'release'
-    name: 'title'
+    #     template: 'release'
+    #     name: 'title'
